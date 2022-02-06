@@ -1,0 +1,34 @@
+
+
+
+:root{
+    --rich-black-op: rgb(0, 8, 20, .8);
+    --rich-black: rgb(0, 8, 20);
+    --oxford-blue: rgb(0, 29, 61);
+    --oxford-blue-op: rgb(0, 29, 61, .8);
+    --prussian-blue:rgb(0, 53, 102);
+    --mikado-yellow:rgb(255, 195, 0);
+    --gold-web: rgb(255, 214, 10, 1);
+    --space-mono: 'Space Mono', monospace;
+    --rokkitt: 'Rokkitt', serif;
+    --orbitron: 'Orbitron', sans-serif;
+    --alice: 'Alice', serif;
+    --main-gradient:  var(--gold-web),var(--oxford-blue);
+}
+
+// $gradients: () !default;
+// $gradients: map-merge((
+//     main: linear-gradient(var(--gold-web), var(--prussian-blue))
+    
+// ), $gradients);
+
+// @mixin bg-gradient($parent, $gradient) {
+//     #{$parent} {
+//     background: $gradient;
+//     }
+// }
+// @each $gradient, $value in $gradients {
+//     @include bg-gradient(".bg-gradient-#{$gradient}", $value);
+// }
+
+

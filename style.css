@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Alice&family=Orbitron:wght@400;500;600;700;800;900&family=Rokkitt:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: transparent;
+  background-attachment: fixed;
+}
+
+:root {
+  --rich-black-op: rgb(0, 8, 20, .8);
+  --rich-black: rgb(0, 8, 20);
+  --oxford-blue: rgb(0, 29, 61);
+  --oxford-blue-op: rgb(0, 29, 61, .8);
+  --prussian-blue:rgb(0, 53, 102);
+  --mikado-yellow:rgb(255, 195, 0);
+  --gold-web: rgb(255, 214, 10, 1);
+  --space-mono: "Space Mono", monospace;
+  --rokkitt: "Rokkitt", serif;
+  --orbitron: "Orbitron", sans-serif;
+  --alice: "Alice", serif;
+  --main-gradient: var(--gold-web),var(--oxford-blue);
+}
+
+nav {
+  background-color: var(--rich-black-op);
+  height: 150px;
+  border-radius: 50px/100px;
+  padding: 30px;
+  width: 90%;
+  margin: 0 auto;
+}
+nav img {
+  width: 100px;
+  background-color: var(--gold-web);
+  border-radius: 50%;
+  border: 5px solid var(--prussian-blue);
+}
+nav h1 {
+  font-family: var(--orbitron);
+  color: var(--mikado-yellow);
+  width: 450px;
+  height: 50px;
+}
+nav .search-bar {
+  width: 500px;
+  height: 50px;
+}
+nav input {
+  width: 70%;
+  border-radius: 20px 0px 0px 20px;
+  padding-left: 20px;
+  border: 5px solid var(--mikado-yellow);
+}
+nav .search-btn {
+  border-radius: 0px 20px 20px 0px;
+  border-left: none;
+}
+nav button {
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+  border: 2px solid var(--mikado-yellow);
+  background-color: var(--prussian-blue);
+  color: var(--mikado-yellow);
+}
+
+main {
+  background-color: var(--oxford-blue-op);
+  margin: 0 auto;
+  border-radius: 30px;
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+}
+main section {
+  min-height: 200px;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.cool-grid {
+  padding: 50px;
+  display: flex;
+  gap: 30px 10%;
+}
+
+.cool-card {
+  padding: 1rem;
+  display: grid;
+  border: 1px solid var(--prussian-blue);
+  border-bottom: 5px solid var(--mikado-yellow);
+  border-radius: 30px;
+  color: white;
+  background-color: var(--rich-black);
+  position: relative;
+  aspect-ratio: 1/0.5;
+  text-decoration: none;
+  z-index: 2;
+  font-family: var(--rokkitt);
+  text-align: center;
+}
+.cool-card-identifier {
+  margin-left: auto;
+  color: var(--mikado-yellow);
+  font-size: 1vw;
+}
+.cool-card-name {
+  font-size: 3vw;
+  font-weight: 600;
+  line-height: 1;
+  width: min-content;
+  margin-bottom: 15px;
+}
+.cool-card-tall {
+  aspect-ratio: 1/0.7;
+}
+.cool-card-offset-down {
+  grid-row: 2/span 2;
+}
+.cool-card-offset-up {
+  grid-row: 1/span 2;
+}
+.cool-card-arrow {
+  font-size: 2.5vw;
+  color: var(--prussian-blue);
+  position: absolute;
+  inset: auto 1rem 0.25rem auto;
+  transform: translateX(-50%);
+  transition: transform 200ms ease-in, opacity 200ms linear;
+  opacity: 0;
+}
+.cool-card::before {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  inset: 0;
+  transition: transform 350 ms ease, opacity 350ms ease;
+  transform: translate(0, 0);
+  pointer-events: none;
+}
+.cool-card:hover, .cool-card:focus {
+  background-color: var(--mikado-yellow);
+  transform: scale(1.25);
+  border: 0;
+  z-index: 20;
+}
+.cool-card:hover .cool-card-name, .cool-card:focus .cool-card-name {
+  color: var(--oxford-blue);
+}
+.cool-card:hover .cool-card-arrow, .cool-card:focus .cool-card-arrow {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.container {
+  background: var(--rich-black-op);
+  height: 100%;
+  padding: 50px;
+  border-radius: 30px;
+}
+.container p {
+  margin: 20px 100px;
+  color: #ddcfcf;
+}
+.container a {
+  color: var(--mikado-yellow);
+  font-size: 6rem;
+  text-decoration: none;
+}
+
+.back {
+  display: flex;
+  position: relative;
+}
+.back a {
+  transform: rotate(180deg) scale(1);
+  position: absolute;
+  transform-origin: right;
+  margin-left: 85%;
+  margin-top: -5%;
+}
+.back:hover a, .back:focus a {
+  transform: scale(1.5) rotate(180deg);
+  color: seashell;
+}
+
+.title-back {
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  font-family: var(--rokkitt);
+  color: var(--mikado-yellow);
+  text-align: center;
+  font-size: 6rem;
+  width: 100%;
+}
+
+.vega {
+  font-family: var(--rokkitt);
+  color: var(--mikado-yellow);
+  text-align: center;
+  font-size: 6rem;
+}
+
+/*# sourceMappingURL=style.css.map */

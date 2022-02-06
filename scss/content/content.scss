@@ -1,0 +1,206 @@
+nav{
+    background-color: var(--rich-black-op);
+    height: 150px;
+    // opacity: .8;
+    border-radius: 50px / 100px;
+    padding: 30px;
+    width: 90%;
+    margin: 0 auto;
+    img{
+        width: 100px;
+        background-color: var(--gold-web);
+        border-radius: 50%;
+        border: 5px solid var(--prussian-blue);
+    }
+    h1{
+        font-family: var(--orbitron);
+        color: var(--mikado-yellow);
+        width: 450px;
+        height: 50px;
+        
+        
+    }
+    .search-bar{
+        width: 500px;
+        height: 50px;
+    }
+    input{
+        width: 70%;
+        border-radius: 20px 0px 0px 20px;
+        padding-left: 20px;
+        border: 5px solid var(--mikado-yellow);
+    }
+    .search-btn{
+        border-radius: 0px 20px 20px 0px;
+        border-left: none;
+    }
+    button{
+        width: 100px;
+        height: 50px;
+        border-radius: 20px;
+        border: 2px solid var(--mikado-yellow);
+        background-color: var(--prussian-blue);
+        color: var(--mikado-yellow);
+    }
+}
+
+main{
+    background-color: var(--oxford-blue-op);
+    margin: 0 auto;
+    border-radius: 30px;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    section{
+        min-height: 200px;
+        // width: inherit;
+        border-radius: 30px;
+        padding: 20px;
+
+    }
+}
+.cool-grid{
+    padding: 50px;
+    display: flex;
+    gap: 30px 10%;
+    
+    
+}
+
+.cool-card{
+    padding: 1rem;
+    display: grid;
+    border: 1px solid var(--prussian-blue);
+    border-bottom: 5px solid var(--mikado-yellow);
+    border-radius: 30px;
+    color: white;
+    background-color: var(--rich-black);
+    position: relative;
+    aspect-ratio: 1 / .5;
+    text-decoration: none;
+    z-index: 2;
+    font-family: var(--rokkitt);
+    text-align: center;
+    
+
+    &-identifier{
+        margin-left: auto;
+        color: var(--mikado-yellow);
+        font-size: 1vw;
+    }
+    &-name{
+        font-size: 3vw;
+        font-weight: 600;
+        line-height: 1;
+        width: min-content;
+        margin-bottom: 15px;
+        
+    }
+
+    &-tall{
+        aspect-ratio: 1/.7;
+    }
+    &-offset-down{
+        grid-row: 2/ span 2;
+    }
+    &-offset-up{
+        grid-row: 1 /span 2;
+    }
+    &-arrow{
+        font-size: 2.5vw;
+        color: var(--prussian-blue);
+        position: absolute;
+        inset: auto 1rem .25rem auto;
+        transform: translateX(-50%);
+        transition: transform 200ms ease-in, opacity 200ms linear;
+        opacity: 0;
+
+    }
+
+    &::before{
+        opacity: 0;
+        content: '';
+        position: absolute;
+        inset: 0;
+        transition: transform 350 ms ease, opacity 350ms ease;
+        transform: translate(0,0);
+        pointer-events: none;
+    }
+
+    &:hover, &:focus{
+        background-color: var(--mikado-yellow);
+        transform: scale(1.25);
+        border: 0;
+        z-index: 20;
+        .cool-card-name{
+            color: var(--oxford-blue);
+        }
+        .cool-card-arrow{
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+    }
+
+
+}
+
+
+.container{
+    background: var(--rich-black-op);
+    height: 100%;
+    padding: 50px;
+
+    border-radius: 30px;
+    p{
+        margin: 20px 100px;
+        color: rgb(221, 207, 207);
+    }
+    a{
+        color: var(--mikado-yellow);
+        font-size: 6rem;
+        text-decoration: none;
+    }
+}
+
+.back{
+    display: flex;
+    position: relative;
+    a{
+        transform: rotate(180deg) scale(1);
+        position: absolute;
+        transform-origin: right;
+        margin-left: 85%;
+        margin-top: -5%;
+        
+    }
+    
+    &:hover, &:focus{
+        a{
+            transform: scale(1.5) rotate(180deg);
+            color:seashell;
+        }
+        
+        
+    }
+}
+.title-back{
+    display: flex;
+    justify-content: center;
+}
+
+h3{
+    font-family: var(--rokkitt);
+    color: var(--mikado-yellow);
+    text-align: center;
+    font-size: 6rem;
+    width: 100%;
+}
+
+.vega{
+    font-family: var(--rokkitt);
+    color: var(--mikado-yellow);
+    text-align: center;
+    font-size: 6rem;
+}
+
